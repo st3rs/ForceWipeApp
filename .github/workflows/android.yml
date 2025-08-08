@@ -28,15 +28,20 @@ jobs:
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
           yes | sdkmanager --licenses
 
-      - name: Set up Gradle (non-wrapper)
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
 
+      # สร้าง Gradle Wrapper (ถ้ายังไม่มีในโปรเจกต์)
+      - name: Generate Gradle wrapper
+        run: |
+          gradle wrapper --gradle-version 8.7
+
       - name: Build Debug APK
         run: |
-          gradle :app:assembleDebug
-          # ทำสำเนาชื่อไฟล์ให้ตรงกับปุ่ม README เดิม
+          ./gradlew :app:assembleDebug
+          # ทำสำเนาไฟล์เพื่อให้ปุ่มใน README ดาวน์โหลดได้
           cp app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/app-release.apk
 
       - name: Upload artifact
