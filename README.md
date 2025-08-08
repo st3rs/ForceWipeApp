@@ -1,3 +1,14 @@
+<!-- Badges -->
+[![Android CI](https://github.com/st3rs/ForceWipeApp/actions/workflows/android.yml/badge.svg)](https://github.com/st3rs/ForceWipeApp/actions)
+[![Latest Release](https://img.shields.io/github/v/release/st3rs/ForceWipeApp?display_name=tag&sort=semver)](https://github.com/st3rs/ForceWipeApp/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/st3rs/ForceWipeApp/total)](https://github.com/st3rs/ForceWipeApp/releases)
+
+<p align="center">
+  <a href="https://github.com/st3rs/ForceWipeApp/releases/latest/download/app-release.apk">
+    <img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge" alt="Download APK">
+  </a>
+</p>
+
 
 # ForceWipeApp 🚀
 
